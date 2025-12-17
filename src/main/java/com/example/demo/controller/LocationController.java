@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/locations") 
+@RequestMapping("/api/locations")
 public class LocationController {
 
     @Autowired
     private LocationService locationservice;
 
-    @PostMapping("/addlocation")  your entity
+    @PostMapping("/addlocation")
     public LocationEntity add(@RequestBody LocationEntity le) {
         return locationservice.createlocation(le);
     }
