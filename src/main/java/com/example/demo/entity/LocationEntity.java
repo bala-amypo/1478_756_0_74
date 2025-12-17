@@ -1,4 +1,3 @@
-
 package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
@@ -8,53 +7,43 @@ import jakarta.persistence.Id;
 
 @Entity
 public class LocationEntity {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long id;
     private String name;
-    private Double latitude;
-    private Double longitude;
-
-    public LocationEntity() {
-    }
-
-    public LocationEntity(String name, Double latitude, Double longitude) {
-        this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
-
-    public Long getId() {
+    private long latitude;
+    private long longitude;
+    public long getId() {
         return id;
     }
-
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
-    public Double getLatitude() {
+    public long getLatitude() {
         return latitude;
     }
-
-    public void setLatitude(Double latitude) {
+    public void setLatitude(long latitude) {
         this.latitude = latitude;
     }
-
-    public Double getLongitude() {
+    public long getLongitude() {
         return longitude;
     }
-
-    public void setLongitude(Double longitude) {
+    public void setLongitude(long longitude) {
         this.longitude = longitude;
     }
+    public LocationEntity() {
+    }
+    public LocationEntity(long id, String name, long latitude, long longitude) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+    
 }
